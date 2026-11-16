@@ -1,0 +1,17 @@
+{
+  "name": "cv-site-template",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node js/build.mjs",
+    "build:tex": "node js/build.mjs --tex",
+    "build:site": "node js/build-site.mjs",
+    "build:all": "npm run build && npm run build:site",
+    "dev:site": "node js/prepare-site-data.mjs && npm --prefix site install --no-audit --no-fund && npm --prefix site run dev",
+    "postinstall": "playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.52.0",
+    "yaml": "^2.7.0"
+  }
+}

@@ -1,0 +1,21 @@
+# Shared profile copy (CV ecosystem + site)
+
+tagline: Data science, research software, and teaching.
+# Used for the site's <meta name="description">; defaults to "name — position"
+description: Alex Example — data scientist and researcher building open research tools.
+about: >
+  I am a data scientist working at the intersection of applied research and
+  software. I build tools that make analysis reproducible and teach the
+  methods behind them.
+
+affiliation: Researcher, Example University · Consultant, Example Lab
+
+research_focus:
+  - title: Applied machine learning
+    detail: Models that hold up outside the notebook.
+  - title: Reproducible research
+    detail: Pipelines, versioned data, and readable code.
+  - title: Research tooling
+    detail: Small tools that remove repetitive work.
+  - title: Teaching
+    detail: Making methods approachable for new practitioners.

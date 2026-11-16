@@ -1,0 +1,282 @@
+/* Classic PhD / professor theme — restrained, serif, no landing-page energy */
+html[data-theme="classic"] {
+  --ink: #1a1a1a;
+  --ink-soft: #444;
+  --mist: #f0f0f0;
+  --paper: #fafaf8;
+  --paper-deep: #f3f3f0;
+  --accent: #1a1a1a;
+  --accent-deep: #000;
+  --line: rgba(0, 0, 0, 0.18);
+  --glow: transparent;
+  --display: "Libre Baskerville", "Times New Roman", Times, serif;
+  --serif: "Libre Baskerville", "Times New Roman", Times, serif;
+  --ui: "Libre Baskerville", "Times New Roman", Times, serif;
+  --max: 44rem;
+  --nav-h: 3rem;
+}
+
+html[data-theme="classic"] body {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+html[data-theme="classic"] .nav {
+  background: var(--paper);
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--line);
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+html[data-theme="classic"] .nav-brand {
+  font-weight: 700;
+  font-size: 1rem;
+}
+html[data-theme="classic"] .nav-links a {
+  font-size: 0.92rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant: normal;
+}
+html[data-theme="classic"] .nav-links a::after {
+  display: none;
+}
+html[data-theme="classic"] .nav-links a.is-active,
+html[data-theme="classic"] .nav-links a:hover {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+html[data-theme="classic"] .nav-cv {
+  border: none;
+  padding: 0.35rem 0 !important;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Compact masthead instead of conversion hero */
+html[data-theme="classic"] .hero {
+  min-height: 0;
+  align-items: start;
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="classic"] .hero-atmosphere {
+  display: none;
+}
+html[data-theme="classic"] .hero-inner {
+  padding: 2.25rem 0 2rem;
+}
+html[data-theme="classic"] .hero-kicker {
+  font-size: 0.95rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--ink-soft);
+  margin-bottom: 0.65rem;
+}
+html[data-theme="classic"] .hero-name {
+  font-size: clamp(1.85rem, 4vw, 2.35rem);
+  font-weight: 700;
+  letter-spacing: 0;
+  line-height: 1.25;
+  max-width: none;
+  margin-bottom: 0.35rem;
+}
+html[data-theme="classic"] .hero-role {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--ink);
+  margin-bottom: 0.35rem;
+  max-width: none;
+}
+html[data-theme="classic"] .hero-affiliation {
+  display: block;
+  margin: 0 0 0.75rem;
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+html[data-theme="classic"] .hero-tagline {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  max-width: 38rem;
+}
+html[data-theme="classic"] .hero-actions {
+  display: none;
+}
+html[data-theme="classic"] .hero-scroll {
+  display: none;
+}
+html[data-theme="classic"] .hero-contact-line {
+  display: block;
+  margin: 0;
+  font-size: 0.95rem;
+}
+html[data-theme="classic"] .hero-contact-line a {
+  color: var(--ink);
+  margin-right: 0.85rem;
+}
+
+html[data-theme="classic"] .section {
+  padding: 2rem 0;
+}
+html[data-theme="classic"] .section-alt {
+  background: transparent;
+}
+html[data-theme="classic"] .eyebrow:empty,
+html[data-theme="classic"] .eyebrow:blank {
+  display: none;
+}
+html[data-theme="classic"] .eyebrow {
+  display: none;
+}
+html[data-theme="classic"] .section-head {
+  margin-bottom: 1rem;
+}
+html[data-theme="classic"] .section-head h2,
+html[data-theme="classic"] .contact-panel h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.25rem;
+  display: inline-block;
+  width: 100%;
+}
+html[data-theme="classic"] .lead {
+  font-size: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+html[data-theme="classic"] .focus-item {
+  grid-template-columns: 1fr;
+  gap: 0.15rem;
+  padding: 0.65rem 0;
+}
+html[data-theme="classic"] .focus-item:hover {
+  background: transparent;
+  padding-left: 0;
+}
+html[data-theme="classic"] .focus-item h3 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+html[data-theme="classic"] .focus-item h3::before {
+  content: "• ";
+}
+html[data-theme="classic"] .focus-item p {
+  padding-left: 0.85rem;
+  font-size: 0.98rem;
+}
+
+html[data-theme="classic"] .exp-title,
+html[data-theme="classic"] .edu-item h3,
+html[data-theme="classic"] .project-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+html[data-theme="classic"] .exp-when,
+html[data-theme="classic"] .edu-when,
+html[data-theme="classic"] .project-year {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-variant-numeric: tabular-nums;
+}
+html[data-theme="classic"] .project {
+  grid-template-columns: 3.5rem 1fr;
+  padding: 0.85rem 0;
+}
+html[data-theme="classic"] .project:hover {
+  background: transparent;
+  transform: none;
+}
+html[data-theme="classic"] .project-arrow {
+  display: none;
+}
+html[data-theme="classic"] .project-meta {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+  font-style: italic;
+  color: var(--ink-soft);
+}
+html[data-theme="classic"] .project-filters {
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+html[data-theme="classic"] .filter {
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-transform: none;
+}
+html[data-theme="classic"] .filter.is-active::after {
+  bottom: -0.75rem;
+  height: 1px;
+  background: var(--ink);
+}
+
+html[data-theme="classic"] .contact-panel {
+  padding: 1.5rem 0;
+}
+html[data-theme="classic"] .contact-links a {
+  font-weight: 400;
+  letter-spacing: 0;
+  border-bottom-width: 1px;
+}
+
+html[data-theme="classic"] .site-footer {
+  font-size: 0.85rem;
+  border-top: 1px solid var(--line);
+  margin-top: 1rem;
+}
+
+html[data-theme="classic"] [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Theme switcher (shared look, quieter on classic) */
+.theme-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+.theme-switch[hidden] {
+  display: none;
+}
+
+.theme-switch-label {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  margin-right: 0.15rem;
+}
+.theme-switch button {
+  font: inherit;
+  font-size: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+  padding: 0.25rem 0.55rem;
+  cursor: pointer;
+  border-radius: 2px;
+}
+.theme-switch button.is-active {
+  color: var(--ink);
+  border-color: var(--ink);
+}
+html[data-theme="classic"] .theme-switch button {
+  border-radius: 0;
+  font-size: 0.85rem;
+}
+
+html[data-theme="modern"] .hero-affiliation,
+html[data-theme="modern"] .hero-contact-line {
+  display: none;
+}

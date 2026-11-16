@@ -1,0 +1,22 @@
+entries:
+  - title: Data Scientist
+    organization: Example Lab
+    start_month: January
+    start_year: 2024
+    end_month: null
+    end_year: Present
+    location: Remote
+    details:
+      - Built and maintained data pipelines used by a team of twelve analysts.
+      - "Skills and technology: Python, SQL, Git."
+
+  - title: Research Assistant
+    organization: Example University
+    start_month: September
+    start_year: 2021
+    end_month: December
+    end_year: "2023"
+    location: Example City
+    details:
+      - Cleaned and analysed survey data for three published studies.
+      - "Skills and technology: R, Stata, LaTeX."

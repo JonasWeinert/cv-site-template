@@ -1,0 +1,26 @@
+# Site theming only (copy lives in about.yaml / copy.yaml)
+
+# Default theme — also overridable via ?theme=… or the footer switcher
+theme: modern
+
+# false = lock the site to `theme`: hides the footer dropdown and ignores ?theme=
+switcher: true
+
+# Theme registry: id → switcher label (CSS themes live under site/src/)
+themes:
+  modern:
+    label: Modern
+  classic:
+    label: Classic
+  ledger:
+    label: Ledger
+  archive:
+    label: Archive
+  fieldnote:
+    label: Fieldnote
+  journal:
+    label: Journal
+  lab:
+    label: Lab
+  campus:
+    label: Campus

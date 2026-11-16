@@ -1,0 +1,15 @@
+# Manifest: lists header + section YAML files (order = CV order)
+output: Alex_Example_CV   # base filename for the PDF/HTML outputs
+header: header.yaml
+about: about.yaml
+copy: copy.yaml
+sections:
+  - path: experience.yaml
+    title: Experience
+  - path: projects.yaml
+    title: Selected Projects
+  - path: education.yaml
+    title: Education
+  - path: skills.yaml
+    title: Skills
+footer: References available upon request.

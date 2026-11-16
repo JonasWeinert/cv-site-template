@@ -1,0 +1,710 @@
+/* Extra themes: ledger | archive | fieldnote | journal | lab | campus
+   Classic lives in theme-classic.css; modern is the default :root in styles.css */
+
+/* ——— Shared helpers ——— */
+html[data-theme="ledger"] .hero-scroll,
+html[data-theme="archive"] .hero-scroll,
+html[data-theme="journal"] .hero-scroll,
+html[data-theme="campus"] .hero-scroll,
+html[data-theme="lab"] .hero-scroll {
+  display: none;
+}
+
+/* ===================== LEDGER ===================== */
+html[data-theme="ledger"] {
+  --ink: #111;
+  --ink-soft: #555;
+  --mist: #ececec;
+  --paper: #fff;
+  --paper-deep: #f7f7f7;
+  --accent: #111;
+  --accent-deep: #000;
+  --line: rgba(0, 0, 0, 0.22);
+  --glow: transparent;
+  --display: "Libre Baskerville", "Times New Roman", Times, serif;
+  --serif: "Libre Baskerville", "Times New Roman", Times, serif;
+  --ui: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 40rem;
+  --nav-h: 0;
+}
+
+html[data-theme="ledger"] body {
+  display: grid;
+  grid-template-columns: minmax(11rem, 14rem) 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+html[data-theme="ledger"] .nav {
+  position: sticky;
+  top: 0;
+  grid-column: 1;
+  grid-row: 1 / 3;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem;
+  height: 100vh;
+  padding: 1.5rem 1rem 1.5rem 1.25rem;
+  border-right: 1px solid var(--line);
+  border-bottom: none;
+  background: var(--paper);
+  backdrop-filter: none;
+}
+html[data-theme="ledger"] .nav-brand {
+  font-size: 0.95rem;
+  font-weight: 700;
+  writing-mode: horizontal-tb;
+}
+html[data-theme="ledger"] .nav-toggle {
+  display: none;
+}
+html[data-theme="ledger"] .nav-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
+}
+html[data-theme="ledger"] .nav-links a {
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  color: var(--ink-soft);
+}
+html[data-theme="ledger"] .nav-links a::after {
+  display: none;
+}
+html[data-theme="ledger"] .nav-links a.is-active {
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+html[data-theme="ledger"] .nav-cv {
+  border: none;
+  padding: 0 !important;
+  margin-top: 0.75rem;
+  text-decoration: underline;
+}
+
+html[data-theme="ledger"] main {
+  grid-column: 2;
+  grid-row: 1;
+}
+html[data-theme="ledger"] .site-footer {
+  grid-column: 2;
+  grid-row: 2;
+  border-top: 1px solid var(--line);
+}
+
+html[data-theme="ledger"] .hero {
+  min-height: 0;
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="ledger"] .hero-atmosphere {
+  display: none;
+}
+html[data-theme="ledger"] .hero-inner {
+  padding: 2rem 0 1.5rem;
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-left: 1.5rem;
+}
+html[data-theme="ledger"] .hero-kicker,
+html[data-theme="ledger"] .exp-when,
+html[data-theme="ledger"] .edu-when,
+html[data-theme="ledger"] .project-year,
+html[data-theme="ledger"] .filter,
+html[data-theme="ledger"] .eyebrow {
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.02em;
+  text-transform: none;
+  font-weight: 500;
+}
+html[data-theme="ledger"] .hero-name {
+  font-size: 1.75rem;
+  letter-spacing: 0;
+  max-width: none;
+  margin-bottom: 0.35rem;
+}
+html[data-theme="ledger"] .hero-role {
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+}
+html[data-theme="ledger"] .hero-affiliation {
+  display: block;
+  font-size: 0.9rem;
+  margin: 0.25rem 0 0.75rem;
+}
+html[data-theme="ledger"] .hero-actions {
+  display: none;
+}
+html[data-theme="ledger"] .hero-contact-line {
+  display: block;
+  font-family: var(--ui);
+  font-size: 0.72rem;
+}
+html[data-theme="ledger"] .hero-contact-line a {
+  margin-right: 0.75rem;
+  color: var(--ink);
+}
+
+html[data-theme="ledger"] .section {
+  padding: 1.5rem 0;
+}
+html[data-theme="ledger"] .section-alt {
+  background: transparent;
+}
+html[data-theme="ledger"] .section-inner {
+  width: min(var(--max), calc(100% - 2.5rem));
+  margin-left: 1.5rem;
+  margin-right: auto;
+}
+html[data-theme="ledger"] .eyebrow {
+  display: none;
+}
+html[data-theme="ledger"] .section-head h2 {
+  font-size: 1.05rem;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 0.2rem;
+  width: 100%;
+  letter-spacing: 0;
+}
+html[data-theme="ledger"] .project:hover,
+html[data-theme="ledger"] .focus-item:hover {
+  background: transparent;
+  transform: none;
+  padding-left: 0;
+}
+html[data-theme="ledger"] .project-arrow {
+  display: none;
+}
+html[data-theme="ledger"] [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 800px) {
+  html[data-theme="ledger"] body {
+    display: block;
+  }
+  html[data-theme="ledger"] .nav {
+    position: sticky;
+    height: auto;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: 1px solid var(--line);
+  }
+  html[data-theme="ledger"] .nav-toggle {
+    display: inline-flex;
+  }
+  html[data-theme="ledger"] .nav-links {
+    display: none;
+  }
+  html[data-theme="ledger"] .nav.is-open .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ===================== ARCHIVE ===================== */
+html[data-theme="archive"] {
+  --ink: #2c241b;
+  --ink-soft: #5c5348;
+  --mist: #e6e0d6;
+  --paper: #f3efe8;
+  --paper-deep: #ebe5db;
+  --accent: #6b4f2c;
+  --accent-deep: #4a361c;
+  --line: rgba(44, 36, 27, 0.16);
+  --glow: rgba(107, 79, 44, 0.08);
+  --display: "Fraunces", Georgia, serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --ui: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 46rem;
+}
+
+html[data-theme="archive"] .hero {
+  min-height: 0;
+}
+html[data-theme="archive"] .hero-atmosphere {
+  background:
+    radial-gradient(ellipse 70% 50% at 20% 0%, rgba(107, 79, 44, 0.12), transparent 55%),
+    linear-gradient(180deg, #e8e1d5, var(--paper) 55%);
+  animation: none;
+}
+html[data-theme="archive"] .hero-inner {
+  padding: 2.5rem 0 2rem;
+}
+html[data-theme="archive"] .hero-name {
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  max-width: none;
+}
+html[data-theme="archive"] .hero-actions .btn-primary {
+  background: var(--accent-deep);
+}
+html[data-theme="archive"] .eyebrow {
+  font-family: var(--ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+}
+html[data-theme="archive"] .section-head h2 {
+  font-size: clamp(1.4rem, 3vw, 1.85rem);
+}
+html[data-theme="archive"] .exp-when,
+html[data-theme="archive"] .project-year,
+html[data-theme="archive"] .edu-when {
+  font-family: var(--ui);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+html[data-theme="archive"] .hero-affiliation {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+html[data-theme="archive"] .section {
+  padding: 2.5rem 0;
+}
+
+/* ===================== FIELDNOTE ===================== */
+html[data-theme="fieldnote"] {
+  --ink: #14323a;
+  --ink-soft: #3d5a63;
+  --mist: #cfdfe3;
+  --paper: #eef5f4;
+  --paper-deep: #e3eeec;
+  --accent: #1f6b5c;
+  --accent-deep: #164f44;
+  --line: rgba(20, 50, 58, 0.14);
+  --glow: rgba(31, 107, 92, 0.1);
+  --display: "Fraunces", Georgia, serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --ui: "Syne", system-ui, sans-serif;
+  --max: 48rem;
+}
+
+html[data-theme="fieldnote"] .hero {
+  min-height: min(70vh, 34rem);
+}
+html[data-theme="fieldnote"] .hero-atmosphere {
+  background:
+    radial-gradient(ellipse 90% 60% at 80% 20%, rgba(31, 107, 92, 0.18), transparent 50%),
+    radial-gradient(ellipse 60% 40% at 10% 80%, rgba(20, 50, 58, 0.1), transparent 45%),
+    linear-gradient(160deg, #d5e6e4, var(--paper) 50%, #f4f8f7);
+}
+html[data-theme="fieldnote"] .hero-name {
+  font-size: clamp(2.6rem, 8vw, 4.5rem);
+}
+html[data-theme="fieldnote"] .focus-grid {
+  counter-reset: note;
+}
+html[data-theme="fieldnote"] .focus-item {
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+}
+html[data-theme="fieldnote"] .focus-item h3::before {
+  counter-increment: note;
+  content: counter(note) ". ";
+  font-family: var(--ui);
+  font-size: 0.85em;
+  color: var(--accent);
+}
+html[data-theme="fieldnote"] .timeline {
+  border-left: 2px solid color-mix(in srgb, var(--accent) 35%, transparent);
+  padding-left: 1.25rem;
+  margin-left: 0.35rem;
+}
+html[data-theme="fieldnote"] .exp-item {
+  border-top: none;
+  position: relative;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+html[data-theme="fieldnote"] .exp-item::before {
+  content: "";
+  position: absolute;
+  left: -1.45rem;
+  top: 1.15rem;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--paper);
+}
+html[data-theme="fieldnote"] .exp-item:last-child {
+  border-bottom: none;
+}
+html[data-theme="fieldnote"] .hero-affiliation {
+  display: block;
+}
+
+/* ===================== JOURNAL ===================== */
+html[data-theme="journal"] {
+  --ink: #1c1c1c;
+  --ink-soft: #4a4a4a;
+  --mist: #ececec;
+  --paper: #fff;
+  --paper-deep: #f6f6f6;
+  --accent: #1c1c1c;
+  --accent-deep: #000;
+  --line: rgba(0, 0, 0, 0.2);
+  --glow: transparent;
+  --display: "Libre Baskerville", "Times New Roman", Times, serif;
+  --serif: "Libre Baskerville", "Times New Roman", Times, serif;
+  --ui: "Libre Baskerville", "Times New Roman", Times, serif;
+  --max: 38rem;
+}
+
+html[data-theme="journal"] body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+html[data-theme="journal"] .nav {
+  background: #fff;
+  backdrop-filter: none;
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="journal"] .nav-links a {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+html[data-theme="journal"] .nav-links a::after {
+  display: none;
+}
+html[data-theme="journal"] .nav-links a.is-active {
+  text-decoration: underline;
+}
+html[data-theme="journal"] .nav-cv {
+  border: none;
+  text-decoration: underline;
+  padding-inline: 0 !important;
+}
+html[data-theme="journal"] .hero {
+  min-height: 0;
+  text-align: center;
+}
+html[data-theme="journal"] .hero-atmosphere {
+  display: none;
+}
+html[data-theme="journal"] .hero-inner {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+html[data-theme="journal"] .hero-name {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  max-width: none;
+  margin-inline: auto;
+}
+html[data-theme="journal"] .hero-role,
+html[data-theme="journal"] .hero-tagline,
+html[data-theme="journal"] .hero-kicker,
+html[data-theme="journal"] .hero-affiliation {
+  margin-inline: auto;
+}
+html[data-theme="journal"] .hero-affiliation {
+  display: block;
+  font-style: italic;
+}
+html[data-theme="journal"] .hero-actions {
+  justify-content: center;
+}
+html[data-theme="journal"] .btn {
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  border-radius: 0;
+}
+html[data-theme="journal"] .eyebrow {
+  display: none;
+}
+html[data-theme="journal"] .section-head {
+  text-align: center;
+  margin-inline: auto;
+}
+html[data-theme="journal"] .section-head h2 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  border-bottom: none;
+  font-variant: small-caps;
+}
+html[data-theme="journal"] .lead {
+  text-align: justify;
+  hyphens: auto;
+}
+html[data-theme="journal"] .lead::first-letter {
+  float: left;
+  font-size: 3.4em;
+  line-height: 0.8;
+  padding: 0.08em 0.1em 0 0;
+  font-weight: 700;
+}
+html[data-theme="journal"] .section-alt {
+  background: transparent;
+}
+html[data-theme="journal"] .section {
+  padding: 1.75rem 0;
+}
+html[data-theme="journal"] .project:hover,
+html[data-theme="journal"] .focus-item:hover {
+  background: transparent;
+  transform: none;
+  padding-left: 0;
+}
+html[data-theme="journal"] .project-arrow {
+  display: none;
+}
+html[data-theme="journal"] .contact-panel {
+  text-align: center;
+}
+html[data-theme="journal"] .contact-links {
+  justify-content: center;
+}
+html[data-theme="journal"] [data-reveal] {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* ===================== LAB ===================== */
+html[data-theme="lab"] {
+  --ink: #e8eef0;
+  --ink-soft: #9aafb6;
+  --mist: #1a2a30;
+  --paper: #0d1619;
+  --paper-deep: #121c20;
+  --accent: #3dcfb6;
+  --accent-deep: #7dffd8;
+  --line: rgba(232, 238, 240, 0.12);
+  --glow: rgba(61, 207, 182, 0.08);
+  --display: "IBM Plex Mono", ui-monospace, monospace;
+  --serif: "IBM Plex Mono", ui-monospace, monospace;
+  --ui: "IBM Plex Mono", ui-monospace, monospace;
+  --max: 52rem;
+}
+
+html[data-theme="lab"] body {
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+html[data-theme="lab"] a {
+  color: var(--accent);
+}
+html[data-theme="lab"] a:hover {
+  color: var(--accent-deep);
+}
+html[data-theme="lab"] .nav {
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  border-bottom-color: var(--line);
+}
+html[data-theme="lab"] .nav-brand,
+html[data-theme="lab"] .nav-links a,
+html[data-theme="lab"] .nav-cv {
+  color: var(--ink-soft);
+}
+html[data-theme="lab"] .nav-links a.is-active,
+html[data-theme="lab"] .nav-brand {
+  color: var(--ink);
+}
+html[data-theme="lab"] .nav-links a::after {
+  background: var(--accent);
+}
+html[data-theme="lab"] .nav-cv {
+  border-color: var(--line);
+}
+html[data-theme="lab"] .hero {
+  min-height: min(72vh, 36rem);
+}
+html[data-theme="lab"] .hero-atmosphere {
+  background:
+    radial-gradient(ellipse 60% 50% at 70% 30%, rgba(61, 207, 182, 0.12), transparent 55%),
+    linear-gradient(160deg, #0a1215, var(--paper) 45%, #10191d);
+  animation: none;
+}
+html[data-theme="lab"] .hero-atmosphere::after {
+  opacity: 0.2;
+}
+html[data-theme="lab"] .hero-name {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  letter-spacing: -0.04em;
+  max-width: none;
+}
+html[data-theme="lab"] .hero-kicker,
+html[data-theme="lab"] .eyebrow,
+html[data-theme="lab"] .filter,
+html[data-theme="lab"] .exp-when,
+html[data-theme="lab"] .project-year {
+  text-transform: none;
+  letter-spacing: 0;
+  font-weight: 500;
+  color: var(--accent);
+}
+html[data-theme="lab"] .btn-primary {
+  background: var(--accent);
+  color: #041014;
+}
+html[data-theme="lab"] .btn-ghost {
+  border-color: var(--line);
+  color: var(--ink);
+}
+html[data-theme="lab"] .section-alt {
+  background: var(--paper-deep);
+}
+html[data-theme="lab"] .section-head h2 {
+  font-size: 1.15rem;
+  letter-spacing: 0;
+}
+html[data-theme="lab"] .project {
+  font-family: var(--ui);
+}
+html[data-theme="lab"] .project-body h3 {
+  font-size: 1rem;
+}
+html[data-theme="lab"] .project-meta {
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--accent);
+}
+html[data-theme="lab"] .project:hover {
+  background: var(--glow);
+}
+html[data-theme="lab"] .theme-switch button {
+  border-color: var(--line);
+  color: var(--ink-soft);
+}
+html[data-theme="lab"] .theme-switch button.is-active {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+html[data-theme="lab"] .hero-affiliation {
+  display: block;
+  color: var(--ink-soft);
+}
+html[data-theme="lab"] :focus-visible {
+  outline-color: var(--accent);
+}
+
+/* ===================== CAMPUS ===================== */
+html[data-theme="campus"] {
+  --ink: #1b2a41;
+  --ink-soft: #4a5d73;
+  --mist: #d9e2ec;
+  --paper: #f7f9fb;
+  --paper-deep: #eef2f6;
+  --accent: #234e70;
+  --accent-deep: #1b3a52;
+  --line: rgba(27, 42, 65, 0.14);
+  --glow: rgba(35, 78, 112, 0.08);
+  --display: "Source Serif 4", Georgia, serif;
+  --serif: "Source Serif 4", Georgia, serif;
+  --ui: "Source Serif 4", Georgia, serif;
+  --max: 56rem;
+}
+
+html[data-theme="campus"] .hero {
+  min-height: 0;
+  border-bottom: 1px solid var(--line);
+}
+html[data-theme="campus"] .hero-atmosphere {
+  background: linear-gradient(180deg, #e4ebf2, var(--paper) 60%);
+  animation: none;
+}
+html[data-theme="campus"] .hero-inner {
+  padding: 2.75rem 0 2.25rem;
+}
+html[data-theme="campus"] .hero-name {
+  font-size: clamp(2rem, 5vw, 2.85rem);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  max-width: none;
+}
+html[data-theme="campus"] .hero-kicker {
+  font-variant: small-caps;
+  letter-spacing: 0.12em;
+  text-transform: lowercase;
+  font-size: 0.95rem;
+}
+html[data-theme="campus"] .hero-role {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+html[data-theme="campus"] .hero-affiliation {
+  display: block;
+  margin: 0.35rem 0 1rem;
+  color: var(--ink-soft);
+}
+html[data-theme="campus"] .hero-actions .btn {
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-variant: small-caps;
+  font-size: 0.95rem;
+}
+html[data-theme="campus"] .nav-links a {
+  text-transform: none;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+html[data-theme="campus"] .eyebrow {
+  display: none;
+}
+html[data-theme="campus"] .section-head h2 {
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 1.35rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 0.35rem;
+  width: 100%;
+}
+html[data-theme="campus"] .section {
+  padding: 2.25rem 0;
+}
+html[data-theme="campus"] .section-alt {
+  background: var(--paper-deep);
+}
+html[data-theme="campus"] .project:hover {
+  transform: none;
+}
+
+/* Theme switcher select */
+.theme-switch select {
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.5rem;
+  border-radius: 2px;
+  max-width: 12rem;
+}
+html[data-theme="lab"] .theme-switch select {
+  color: var(--ink);
+  border-color: var(--line);
+  background: var(--paper-deep);
+}
+
+html[data-theme="modern"] .hero-affiliation,
+html[data-theme="modern"] .hero-contact-line,
+html[data-theme="archive"] .hero-contact-line,
+html[data-theme="fieldnote"] .hero-contact-line,
+html[data-theme="journal"] .hero-contact-line,
+html[data-theme="lab"] .hero-contact-line,
+html[data-theme="campus"] .hero-contact-line {
+  display: none;
+}
+
+html[data-theme="ledger"] .hero-contact-line,
+html[data-theme="classic"] .hero-contact-line {
+  display: block;
+}

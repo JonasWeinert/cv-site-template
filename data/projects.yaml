@@ -1,0 +1,17 @@
+entries:
+  - name: Example Tool
+    summary: A small command-line tool for tidying survey exports
+    year: 2025
+    url: https://github.com/alex-example/example-tool
+    details:
+      - Converts raw survey exports into analysis-ready tables.
+      - "Skills and technology: Python, pandas."
+
+# Site-only extras (not on the printed CV)
+more:
+  - name: Example Dashboard
+    summary: Interactive dashboard for a public dataset
+    year: 2024
+    url: https://github.com/alex-example/example-dashboard
+    homepage: https://example.com
+    tags: [TypeScript, dataviz]

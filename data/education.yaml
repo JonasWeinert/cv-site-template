@@ -1,0 +1,15 @@
+entries:
+  - institution: Example University
+    degree: MSc Data Science | Distinction
+    start: 2020
+    end: 2021
+    location: Example Country
+    details:
+      - "Thesis: Forecasting demand with gradient-boosted trees."
+
+  - institution: Example College
+    degree: BA Economics
+    start: 2017
+    end: 2020
+    location: Example Country
+    details: []
