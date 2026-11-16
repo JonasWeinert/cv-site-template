@@ -52,6 +52,8 @@ const payload = {
     themes: site.themes || {},
     // switcher: false locks the site to `theme` (no footer dropdown, ignores ?theme=)
     switcher: site.switcher !== false,
+    // credit: false hides the "made with cv-site-template" link in the footer
+    credit: site.credit !== false,
     tagline: about.tagline,
     description: about.description || `${header.name} — ${header.position}`,
     about: String(about.about || "").trim(),

@@ -54,6 +54,8 @@ function applyCopy(theme) {
   setText("[data-cta-primary]", copy.cta_primary || "Research");
   setText("[data-cta-secondary]", copy.cta_secondary || "CV");
   setText("[data-footer-note]", copy.footer || "");
+  const credit = $("[data-footer-credit]");
+  if (credit) credit.hidden = data.site?.credit === false;
 
   setText("[data-copy-research-eyebrow]", sections.research_eyebrow ?? "Research");
   setText("[data-copy-research-title]", sections.research_title ?? "Research");

@@ -6,6 +6,9 @@ theme: modern
 # false = lock the site to `theme`: hides the footer dropdown and ignores ?theme=
 switcher: true
 
+# false = hide the "Site and CV made with cv-site-template" footer link
+credit: true
+
 # Theme registry: id → switcher label (CSS themes live under site/src/)
 themes:
   modern:

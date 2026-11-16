@@ -33,7 +33,7 @@ Optional: `npm run build:tex` (needs XeLaTeX).
 | `about.yaml` | Tagline, about text, meta description, focus areas |
 | `copy.yaml` | Per-theme site wording (nav labels, section titles) |
 | `education.yaml` / `experience.yaml` / `projects.yaml` / `skills.yaml` | CV + site (`projects.more` = site-only extras) |
-| `site.yaml` | Theme, theme switcher on/off |
+| `site.yaml` | Theme, theme switcher on/off, footer credit on/off |
 
 ## Keeping your data in another repo
 
