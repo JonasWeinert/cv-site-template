@@ -130,6 +130,7 @@ function preamble() {
 export function buildTex(manifest) {
   const header = loadYaml(manifest.header);
   const parts = [preamble(), renderHeader(header), ""];
+  if (manifest.summary) parts.push(escapeLatex(String(manifest.summary).trim()), "\\vspace{0.4em}", "");
   for (const sec of manifest.sections) {
     const key = sec.path.replace(/\.ya?ml$/i, "");
     const renderer = RENDERERS[key];

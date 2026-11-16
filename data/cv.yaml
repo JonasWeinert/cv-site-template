@@ -1,5 +1,9 @@
 # Manifest: lists header + section YAML files (order = CV order)
 output: Alex_Example_CV   # base filename for the PDF/HTML outputs
+# Optional 2–3 line summary printed under the header
+summary: >
+  Data scientist building reproducible pipelines and small research tools,
+  with experience in survey data, machine learning and teaching.
 header: header.yaml
 about: about.yaml
 copy: copy.yaml

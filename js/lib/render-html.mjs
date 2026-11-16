@@ -136,6 +136,10 @@ a:hover { text-decoration: underline; }
   line-height: 1.3;
 }
 .header .sep { margin: 0 0.3em; }
+.summary {
+  margin: 0.35em 0 0.2em;
+  text-align: justify;
+}
 
 section {
   margin: 0;
@@ -218,6 +222,9 @@ export function renderHtml(manifest) {
   const footer = manifest.footer
     ? `<div class="footer">${esc(manifest.footer)}</div>`
     : "";
+  const summary = manifest.summary
+    ? `<p class="summary">${esc(String(manifest.summary).trim())}</p>`
+    : "";
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -237,6 +244,7 @@ export function renderHtml(manifest) {
     <a href="${esc(header.linkedin_url)}">linkedin.com/in/${esc(header.linkedin)}</a>
   </div>
 </header>
+${summary}
 ${sections}
 ${footer}
 </body>

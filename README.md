@@ -28,7 +28,7 @@ Optional: `npm run build:tex` (needs XeLaTeX).
 
 | File | Used by |
 |------|---------|
-| `cv.yaml` | Manifest: output filename, section files and order |
+| `cv.yaml` | Manifest: output filename, optional summary, section files and order |
 | `header.yaml` | Name, position, contact links (`phone` optional) |
 | `about.yaml` | Tagline, about text, meta description, focus areas |
 | `copy.yaml` | Per-theme site wording (nav labels, section titles) |
